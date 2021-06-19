@@ -95,10 +95,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "yarn dev",
-    "server": "node backend/src/server.js",
-    "client": "cd frontend && yarn start",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "start": "node backend/src/server.js",
+    "heroku-postbuild": "cd frontend && yarn install && yarn start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
