@@ -19,12 +19,6 @@ app.use(bodyParser.urlencoded({extended: true })); // ADDED
 
 app.use(express.static(publicPath));
 
-// cd src && yarn start
-// yarn add
-app.get('*', (req, res) => {
-   res.sendFile(path.resolve(__dirname, '../../frontend/build', 'index.html'));
-});
-
 app.listen(port, () => {
    console.log('Server is up!');
 });
