@@ -19,6 +19,10 @@ app.use(bodyParser.urlencoded({extended: true })); // ADDED
 
 app.use(express.static(publicPath));
 
+// app.get("/", (req, res) => {
+//    res.send('Hello World');
+// })
+
 app.listen(port, () => {
    console.log('Server is up!');
 });
