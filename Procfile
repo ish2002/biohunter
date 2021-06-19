@@ -1,1 +1,1 @@
-web: node frontend/index.js
+web: yarn dev
