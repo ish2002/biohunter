@@ -1,3 +1,4 @@
+
 const path = require('path');
 const express = require('express');
 const cors = require('cors'); // ADDED
@@ -20,7 +21,9 @@ app.use(express.static(publicPath));
 
 // cd src && yarn start
 // yarn add
-app.get('/', (req, res) => {res.send('BioHunters ')})
+app.get('*', (req, res) => {
+   res.sendFile(path.resolve(__dirname, '../../frontend/build', 'index.html'));
+});
 
 app.listen(port, () => {
    console.log('Server is up!');
