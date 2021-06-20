@@ -1,5 +1,7 @@
+import { userSQL } from "./sql";
+
 const pgp = require("pg-promise")({});
-require("dotenv").config();
+// require("dotenv").config();
 
 const dbInfo = {
   user: process.env.DB_USER,
@@ -12,5 +14,19 @@ const dbInfo = {
 const db = pgp(dbInfo);
 
 export default class Database {
+  static async newUser(attr) {
+    var result = {};
 
+    await db
+      .one(userSQL.newUser, attr)
+      .then((data) => {
+        console.log(data);
+        result = data;
+      })
+      .catch((error) => {
+        console.log("ERROR:", error); // print error;
+      });
+
+    return result;
+  }
 }
