@@ -36,6 +36,63 @@ app.post("/users", async (req, res) => {
    }
  });
 
+ app.get("/animal", async (req, res) => {
+   try {
+     const result = await Database.getAnimal(req.body);
+     console.log(result);
+     res.json(result);
+   } catch (error) {
+     res.body = "Error: " + error;
+   }
+ });
+
+ app.post("/users/id", async (req, res) => {
+   try {
+     const result = await Database.getUser(req.body);
+     console.log(result);
+     res.json(result);
+   } catch (error) {
+     res.body = "Error: " + error;
+   }
+ });
+
+ app.get("/users/id", async (req, res) => {
+   try {
+     if (!req.cookies.userId) {
+       res.send("Error: Please login");
+       return;
+     }
+     const user = await Database.getUser({
+       user_id: req.cookies.userId,
+     });
+     user.subjects = await Promise.all(user.subjects.map(Database.getTag));
+     console.log(user);
+     res.json(user);
+   } catch (error) {
+     res.body = "Error: " + error;
+   }
+ });
+ 
+
+ app.post("/users/login", async (req, res) => {
+   try {
+     const user = await Database.authUser({ username: req.body.username });
+     if (await bcrypt.compare(req.body.password, user.password)) {
+       res.cookie("userId", user.user_id, {
+         httpOnly: true,
+         sameSite: "None",
+         secure: true,
+         maxAge: 86400 * 1000,
+       });
+       res.json({ success: true });
+     } else {
+       res.json({ success: false });
+     }
+   } catch (error) {
+     res.body = "Error: " + error;
+   }
+ });
+
 app.listen(port, () => {
    console.log('Server is up!');
 });

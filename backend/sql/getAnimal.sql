@@ -1,3 +1,3 @@
 SELECT *
-FROM "animals"
+FROM "living_organisms"
 WHERE "name" = ${name}

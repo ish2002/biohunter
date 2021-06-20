@@ -9,6 +9,7 @@ function sql(filename) {
 export const userSQL = {
   newUser: sql("../sql/newUser.sql"),
   getUser: sql("../sql/getUser.sql"),
+  authUser: sql("../sql/authUser.sql"),
 }
 
 export const animalSQL = {

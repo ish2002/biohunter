@@ -1,0 +1,12 @@
+.button {
+    background: 3px rgb(214, 196, 114);
+    border-radius: 3px;
+    padding: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    color: white;
+}
+
+.navbar {
+    text-align: center;
+}

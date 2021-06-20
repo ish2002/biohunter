@@ -1,0 +1,10 @@
+.myDiv {
+  border: 3px solid #43281C;
+  width: 220px;
+  margin: 5px;
+  font-weight: 500;
+  padding: 0px;
+  border-radius: 19px;
+  background: #43281C;
+  color: #BCE790;
+}
