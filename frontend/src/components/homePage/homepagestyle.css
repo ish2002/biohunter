@@ -58,6 +58,8 @@
   float: left;
 }
 .button{
+  display: flex;
+  justify-content: space-between;
   padding: 10px 20px;
   border: 0;
   background: blanchedalmond;
@@ -89,18 +91,18 @@
 }
 .search-icon{
   height: 60%;
-  width: 80px;
+  width: 60px;
 }
 .search-icon .fa{
-  margin: 45px 23px;
+  margin: 35px 13px;
   display: block;
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
 }
 .social-icons{
   height: 35%;
-  width: 80px;
+  width: 60px;
   background: blanchedalmond;
   text-align: center;
   padding-top: 27%;
@@ -108,7 +110,7 @@
   position: absolute;
 }
 .social-icons .fa{
-  margin: 15px 23px;
+  margin: 15px 13px;
   display: block;
   padding: 8px;
   border: 1px solid #000;
