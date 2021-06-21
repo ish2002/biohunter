@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devide=width, initial-scale=1">
     <title>BioHunters</title>
     <link rel="stylesheet" href="homepagestyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
       <div class="wrapper">
-        <div class="logo">
-          <img src="./BioHunters.png" height="120px" width="120px" alt="BioHunters Logo">
+        <div class="nav-bar">
+            <div class="logo">
+              <img src="./BioHunters.png" height="120px" width="120px" alt="BioHunters Logo">
+            </div>
+          <div class="nav-links" id="nav-links">
+          <i class="fa fa-close" onclick="closeMenu()"></i>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Community</a>
+              </li>
+              <li>
+                <a href="#">Gallery</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+            <button type="button" class="button">SIGN UP</button>
+          </div>
+          <i class="fa fa-bars" onclick="showMenu()"></i>
         </div>
-        <ul class="nav-area">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Community</a>
-          </li>
-          <li>
-            <a href="#">Gallery</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="welcome-text">
-        <h1>Are you a BioHunter?</h1>
-        <a href="#">Learn More</a>
+        <div class="welcome-text">
+          <h1>Are you a <span>BioHunter</span>?</h1>
+          <button type="button" class="button">LEARN MORE</button>
+        </div>
+        <div class="menu">
+          <div class="search-icon">
+            <i class="fa fa-th-list"></i>
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="social-icons">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-facebook-f"></i>
+          </div>
+        </div>
       </div>
     </header>
+    <script>
+      var show=document.getElementById("nav-links");
+      function showMenu() {
+        show.style.right="0";
+      }
+      function closeMenu() {
+        show.style.right="-200px";
+      }
+    </script>
   </body>
 </html>
