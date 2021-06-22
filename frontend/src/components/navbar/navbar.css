@@ -1,12 +1,39 @@
-.button {
-    background: 3px rgb(214, 196, 114);
-    border-radius: 3px;
-    padding: 10px;
+.logo img{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.nav-bar{
+    display: flex;
+    padding: 25px 35px;
+  }
+  .nav-links{
+    flex: 1;
+  }
+  .nav-links ul{
+    margin-left: 0px;
+  }
+  .nav-links ul li{
+    list-style: none;
     display: inline-block;
-    margin-left: 5px;
-    color: white;
-}
-
-.navbar {
-    text-align: center;
-}
+    padding: 8px 25px;
+  }
+  .nav-links ul a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family:'Brush Script MT', cursive;
+    font-size: 13px;
+  }
+  .nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: blanchedalmond;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .nav-links ul li:hover::after{
+    width: 100%;
+  }

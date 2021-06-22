@@ -18,7 +18,7 @@
   background-position: center center;
   position: relative;
 } */
-.nav-bar{
+/* .nav-bar{
   display: flex;
   padding: 40px 120px;
 }
@@ -56,12 +56,13 @@
   width: 100px;
   height: 100px;
   float: left;
-}
+} */
 .button{
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  border: 0;
+  border: 0.4;
+  border-color: white;
   background: blanchedalmond;
   font-weight: bold;
   font-family: sans-serif;
@@ -72,7 +73,7 @@
 }
 .welcome-text{
   margin: 80px 100px;
-  color: white;
+  color: rosybrown;
 }
 .welcome-text h1{
   margin-bottom: 30px;
