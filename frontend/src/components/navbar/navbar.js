@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./navbar.css";
 import logo from "./BioHunters.png";
+import { VscAccount } from "react-icons/vsc";
 
 const Button = styled.button`
-  display: center;
+  display: flex;
+  flex: space-around;
   justify-content: space-between;
   padding: 7px 20px; 
   border: 0;
@@ -14,11 +16,11 @@ const Button = styled.button`
   font-weight: bold;
   font-family: sans-serif;
   cursor: pointer;
-  color: black;
+  color: white;
   border-radius: 40px;
   outline: 0;
-  width: 120px;
-  margin: 7px;
+  width: 140px;
+  margin: -10px 20px;
   box-shadow: 0px 2px 2px lightgray;
   &:hover{
     background-color: #fff;
@@ -36,41 +38,42 @@ export default class NavBar extends React.Component {
           <i class="fa fa-close" onclick="closeMenu()"></i>
             <ul>
               <li>
-                <Link to="/home">
+                <Link to="/home" style={{ textDecoration: 'none', color: "white"}}>
                     Home
                 </Link>
               </li>
               <li>
-                <Link to="/about">
+                <Link to="/about" style={{ textDecoration: 'none', color: "white"}}>
                     About
                 </Link>
               </li>
               <li>
-                <Link to="/community">
+                <Link to="/community" style={{ textDecoration: 'none', color: "white"}}>
                     Community
                 </Link>
               </li>
               <li>
-                <Link to="/login">
+                <Link to="/gallery" style={{ textDecoration: 'none', color: "white"}}>
                     Gallery
                 </Link>
               </li>
               <li>
-                <Link to="/login">
+                <Link to="/contact" style={{ textDecoration: 'none', color: "white"}}>
                     Contact Us
                 </Link>
               </li>
             </ul>
             <div>
-              <Button>LOGIN</Button>
-            </div>
-            <div>
-              <Button>SIGN UP</Button>
+              <Button>
+                <VscAccount size="18px" color="black"/>
+                  <Link to="/signup" style={{ textDecoration: 'none', color: "black"}}>
+                  &nbsp; Account
+                  </Link>
+              </Button>
             </div>
           </div>
           <i class="fa fa-bars" onclick="showMenu()"></i>
         </div>
-            
         );
     }
 }

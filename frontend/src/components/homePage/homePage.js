@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../navbar/navbar";
-import "./homePage.css";
+//import "./homePage.css";
 import "./homepagestyle.css";
 // import { BiodiversityProfile } from "../biodiversityProfile";
 // import { WeeklyChallenge } from "../biodiversityProfile";
@@ -26,7 +26,6 @@ const animals = [
 
 const Button = styled.button`
   display: flex;
-  justify-content: space-between;
   padding: 10px 20px; 
   border: 0;
   background: blanchedalmond;
@@ -70,7 +69,11 @@ export default class HomePage extends React.Component {
                 
                 <div class="welcome-text">
                   <h1>Are you a <span>BioHunter</span>?</h1>
-                  <Button>LEARN MORE</Button>
+                  <Button>
+                    <Link to={`/about`} style={{ textDecoration: 'none', color: "black"}}>
+                      LEARN MORE
+                    </Link>
+                  </Button>
                 </div>
                 {/*
                 {animals.map((animal) => (
@@ -82,7 +85,7 @@ export default class HomePage extends React.Component {
         <div>
             <center>
             <Button>
-                <Link to={`/animal/bee`}>
+                <Link to={`/animal/bee`} style={{ textDecoration: 'none', color: "black"}}>
                 Week 1: What's the buzz about?
                 </Link>
             </Button>
@@ -91,7 +94,7 @@ export default class HomePage extends React.Component {
       <div>
         <center>
         <Button style={{color:"#fff"}}>
-        <Link to={`/animal/bug`}>
+        <Link to={`/animal/bug`} style={{ textDecoration: 'none', color: "black"}}>
                 Week 2: Who may I be?
         </Link></Button>
         </center>
@@ -99,7 +102,7 @@ export default class HomePage extends React.Component {
       <div>
         <center>
         <Button style={{color:"#38B6FF"}}>
-        <Link to={`/animal/bird`}>
+        <Link to={`/animal/bird`} style={{ textDecoration: 'none', color: "black"}}>
                 Week 3: A little birdie told me...
         </Link>
         </Button>
@@ -108,7 +111,7 @@ export default class HomePage extends React.Component {
       <div>
         <center>
         <Button style={{color:"#05ABC4"}}>
-        <Link to={`/animal/bug`}>
+        <Link to={`/animal/bug`} style={{ textDecoration: 'none', color: "black"}}>
                 Week 4: Are you bugged yet?
         </Link>
         </Button>
@@ -117,7 +120,7 @@ export default class HomePage extends React.Component {
       <div>
         <center>
         <Button style={{color:"#FAD74B"}}>
-        <Link to={`/animal/mouse`}>
+        <Link to={`/animal/mouse`} style={{ textDecoration: 'none', color: "black"}}>
                 Week 5: Why rat when you can...
         </Link>
         </Button>
@@ -126,7 +129,7 @@ export default class HomePage extends React.Component {
       <div>
         <center>
         <Button style={{color:"#E8C892"}}>
-        <Link to={`/animal/robin`}>
+        <Link to={`/animal/robin`} style={{ textDecoration: 'none', color: "black"}}>
                 Week 6: Will you be able to find me?
         </Link>
         </Button>
@@ -135,7 +138,7 @@ export default class HomePage extends React.Component {
       <div>
         <center>
         <Button style={{color:"#99CC63"}}>
-        <Link to={`/animal/mushroom`}>
+        <Link to={`/animal/mushroom`} style={{ textDecoration: 'none', color: "black"}}>
                 Week 7: I'm a fun-guy
         </Link>
         </Button>

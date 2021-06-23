@@ -48,6 +48,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
+        <title>BioHunters</title>
         <Switch>
             <Route exact path="/">
               <HomePage/>
