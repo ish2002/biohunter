@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./navbar.css";
 import logo from "./BioHunters.png";
-import { VscAccount } from "react-icons/vsc";
+import { FiLogIn } from "react-icons/fi";
 
 const Button = styled.button`
   display: flex;
@@ -65,9 +65,9 @@ export default class NavBar extends React.Component {
             </ul>
             <div>
               <Button>
-                <VscAccount size="18px" color="black"/>
+                <FiLogIn size="18px" color="black"/>
                   <Link to="/signup" style={{ textDecoration: 'none', color: "black"}}>
-                  &nbsp; Account
+                  &nbsp; Sign Up
                   </Link>
               </Button>
             </div>

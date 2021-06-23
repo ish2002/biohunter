@@ -68,7 +68,6 @@ export default class App extends React.Component {
             <Route path="/about">
               <About />
             </Route>
-
         </Switch>
       </>
     );

@@ -104,17 +104,20 @@ button {
   padding: 20px 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .hero nav h2 {
   color: #fff;
+  margin-right: 560px;
 }
 
 .hero nav button {
-  width: 86px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 110px;
   padding: 8px 0;
   background: blanchedalmond;
+  margin-top: 0px;
+  margin-right: 20px;
   color: black;
-  margin-left: -73%;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaHome } from "react-icons/fa";
+import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import { FiLogOut } from "react-icons/fi";
 
 const Hero = ({handleLogout}) => {
   return(
@@ -15,7 +17,18 @@ const Hero = ({handleLogout}) => {
               </Link>  
           </button>
         </div>
-        <button onClick={handleLogout}>Logout</button>
+        <div>
+          <button>
+            <VscAccount size="18px" color="black"/>
+              <Link to="/profile" style={{ textDecoration: 'none', color: "black"}}>
+                &nbsp; Account
+              </Link>  
+          </button>
+        </div>
+        <button onClick={handleLogout}>
+          <FiLogOut size="18px" color="black"/>
+          Logout
+        </button>
       </nav>
     </section>
   )

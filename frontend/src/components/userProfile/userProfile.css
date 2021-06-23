@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.heading{
+  font-size: 40px;
+  align-items: center;
+}
+.page{
+  height: 100vh;
+  background-color: rgb(177, 241, 28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container
+.img {
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+}
